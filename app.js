@@ -8,17 +8,17 @@ var input = [
         message: 'Nilai s?'
     }
 ]
-var str1 = ' ';
-var str2 = '@';
 function maze(s) {
+    var repeat1 = ' '.repeat(s-2);
+    var repeat2 = '@'.repeat(s-2);
     for (var i = 0; i < s; i++){
         if((i +1) % 2 == 0){
-            console.log(chalk.green('@'+str1.repeat(s-2)+'@'));
+            console.log(chalk.green('@'+repeat1+'@'));
         } else {
             if ((i + 3) % 4 ==! 0){
-                console.log(chalk.green(str2.repeat(s-2)+' '+'@'))
+                console.log(chalk.green(repeat2+' '+'@'))
             } else {
-                console.log(chalk.green('@'+' '+str2.repeat(s-2)))
+                console.log(chalk.green('@'+' '+repeat2))
             }
         }
     }
